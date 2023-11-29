@@ -3,6 +3,7 @@ import numpy as np
 import os
 import json
 from sensitive_meta_policy import sensitive_tag_matching_policy
+from utils.filesystem import recursive_mkdir
 
 
 source_root='/mnt/e/Workspace/Telesurgery/Data/Field Data/2023_11_10'
@@ -54,14 +55,6 @@ def match(key, policy) -> bool:
         return key == expected
     else:
         raise Exception(f'Invalid policy: {policy}')
-    
-def recursive_mkdir(target_path):
-    if os.path.exists(os.path.dirname(target_path)):
-        if not os.path.exists(target_path):
-            os.mkdir(target_path)
-        return
-    else:
-        recursive_mkdir(os.path.dirname(target_path))
 
     
 if __name__ == '__main__':

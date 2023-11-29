@@ -1,4 +1,6 @@
 Data/
 Literature/
 .DS_Store
+models/
 *.pyc
+.idea
