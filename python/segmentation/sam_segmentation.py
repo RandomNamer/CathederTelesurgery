@@ -6,10 +6,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 from transformers import SamModel, SamProcessor
-from common_configs import project_root
+from common_configs import PROJECT_ROOT
 from segmentation.common import otsu
 
-source_root = f"{project_root}/Data/Datasets/RigidModelVideo-11-21/11-21-3-clip0"
+source_root = f"{PROJECT_ROOT}/Data/Datasets/RigidModelVideo-11-21/11-21-3-clip0"
 source_images = [f"{source_root}/frame0001.jpg"]
 # source_images = [f"{source_root}/{file}" for file in os.listdir(source_root) if file.endswith(".jpg")]
 

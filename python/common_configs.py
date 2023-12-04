@@ -1,2 +1,2 @@
 
-project_root = "/mnt/e/Workspace/CathederTelesurgery"
+PROJECT_ROOT = "/mnt/e/Workspace/CathederTelesurgery"
