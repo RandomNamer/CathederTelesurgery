@@ -6,3 +6,4 @@ models/
 .idea
 *.jpg
 **/__pycache__/
+*.png
