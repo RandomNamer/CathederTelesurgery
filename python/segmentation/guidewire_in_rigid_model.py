@@ -42,6 +42,9 @@ def adaptive_threshold_wrapper(image, maxValue, block_size, C, max_block_mean=12
     new_image[new_image > max_block_mean] = max_block_mean
     return cv2.adaptiveThreshold(new_image, maxValue, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, blockSize=block_size, C=C)
 
+
+# Version 1: default params;
+# Version 2: allow fragmentation; manual thresholding
 def segment_guidewire(image: np.ndarray, connnected_components_thresholding='otsu', dialation_ksize_skeleton=7, endpoint_bound_frac=0.05, skeleton_only=False, allow_fragmentation=False):
     h, w = image.shape[:2]
     endpoint_boundary = (h * endpoint_bound_frac, w * endpoint_bound_frac, h * (1-endpoint_bound_frac), w * (1-endpoint_bound_frac))
