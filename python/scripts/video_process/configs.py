@@ -11,8 +11,32 @@ class TimeStamp:
     def __sub__(self, other):
         return TimeStamp(minute=self.minute - other.minute, second=self.second - other.second, hour=self.hour - other.hour, millisecond=self.millisecond - other.millisecond)
 
+config_rigid_220 = [
+    {
+        'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/ColorizedRigid/2-20-1.mov",
+        'clips': [
+            (TimeStamp(0,2), TimeStamp(0, 18)),
+            (TimeStamp(0, 52), TimeStamp(1, 4)),
+            
+        ]
+    },
+    {
+        'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/ColorizedRigid/2-20-2.mov",
+        'clips': [
+            (TimeStamp(0, 3), TimeStamp(0, 26)),
+            (TimeStamp(0, 38), TimeStamp(0, 54)),
+        ]
+    },
+    {
+        'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/ColorizedRigid/2-20-3.mov",
+        'clips': [
+            (TimeStamp(0, 3), TimeStamp(1, 8)),
+        ]
+    }
+]
 
-video_sample_config = [
+
+config_rigid_1121 = [
     {
         'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/11-21-1.mov",
         'clips': [
@@ -35,3 +59,6 @@ video_sample_config = [
         ]
     }
 ]
+
+
+video_sample_config = config_rigid_220

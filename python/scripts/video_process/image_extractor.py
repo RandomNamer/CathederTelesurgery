@@ -4,7 +4,9 @@ import subprocess
 from os.path import join, split
 
 
-output_dir = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-11-21/"
+# output_dir = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-11-21/"
+output_dir = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-2-20/"
+
 for cfg in video_sample_config:
     src_path = cfg["path"]
     vid_file_name = split(src_path)[-1].split(".")[0]
