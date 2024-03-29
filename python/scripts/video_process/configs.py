@@ -16,8 +16,7 @@ config_rigid_220 = [
         'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/ColorizedRigid/2-20-1.mov",
         'clips': [
             (TimeStamp(0,2), TimeStamp(0, 18)),
-            (TimeStamp(0, 52), TimeStamp(1, 4)),
-            
+            (TimeStamp(0, 52), TimeStamp(1, 4)),  
         ]
     },
     {
