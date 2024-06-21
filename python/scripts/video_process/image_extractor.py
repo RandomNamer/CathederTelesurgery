@@ -1,11 +1,10 @@
 from utils.filesystem import recursive_mkdir
-from configs import video_sample_config
+from configs import video_sample_config, output_dir
 import subprocess
 from os.path import join, split
 
 
-# output_dir = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-11-21/"
-output_dir = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-2-20/"
+
 
 for cfg in video_sample_config:
     src_path = cfg["path"]
@@ -17,5 +16,10 @@ for cfg in video_sample_config:
         recursive_mkdir(working_dir)
         print('Calling: ', cmd)
         res = subprocess.call(cmd, shell=True,)
+        if len(clip) > 2:
+            if clip[2] is not None:
+                print(f'Clip {clip_counter} has desc: {clip[2]}')
+                with open(f'{working_dir}/desc.txt', 'w') as f:
+                    f.write(clip[2])
         print(f'successfully processed clip {clip_counter} for video {vid_file_name} with {res}')
         clip_counter += 1

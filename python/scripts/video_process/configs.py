@@ -11,6 +11,26 @@ class TimeStamp:
     def __sub__(self, other):
         return TimeStamp(minute=self.minute - other.minute, second=self.second - other.second, hour=self.hour - other.hour, millisecond=self.millisecond - other.millisecond)
 
+
+config_hand_517 = [
+    {
+        'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/2024-5-17/5-17-2.mov",
+        'clips': [
+            (TimeStamp(0, 1), TimeStamp(0, 27)),
+        ]
+    },
+    {
+        'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/2024-5-17/5-17-3.mov",
+        'clips': [
+            (TimeStamp(0, 10), TimeStamp(0, 21), "Translation Only"),
+            (TimeStamp(0, 23), TimeStamp(0, 30), "Rotation Only"),
+            (TimeStamp(1, 2), TimeStamp(1, 20), "Rotation + Translation"),
+        ]
+    }
+]
+output_dir_517 = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/HandModelVideo-5-17/"
+
+
 config_rigid_220 = [
     {
         'path': "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/ColorizedRigid/2-20-1.mov",
@@ -33,6 +53,7 @@ config_rigid_220 = [
         ]
     }
 ]
+output_dir_220 = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-2-20/"
 
 
 config_rigid_1121 = [
@@ -58,6 +79,8 @@ config_rigid_1121 = [
         ]
     }
 ]
+output_dir_1121 = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/RigidModelVideo-11-21/"
 
 
-video_sample_config = config_rigid_220
+output_dir = output_dir_517
+video_sample_config = config_hand_517
