@@ -16,6 +16,18 @@ class TimeStamp:
             millisecond=self.millisecond - other.millisecond,
         )
 
+config_aruco_725 = [
+    {
+        "path": "/mnt/e/Workspace/CathederTelesurgery/Data/Videos/2024-7-25/1.mov",
+        "clips": [
+            (TimeStamp(0,7), TimeStamp(0, 46), "ARUCO 4x4.\n Faster, more jittery motion"),
+            (TimeStamp(0, 48), TimeStamp(1, 15), "ARUCO 4x4.\n Slow, linear motion"),
+            (TimeStamp(1,18), TimeStamp(1, 24), "ARUCO 4x4.\n Short clip"),
+        ],
+        
+    },
+]
+output_dir_725 = "/mnt/e/Workspace/CathederTelesurgery/Data/Datasets/ArucoVideo-7-25/"
 
 config_aruco_628 = [
     {
@@ -117,5 +129,5 @@ output_dir_1121 = (
 )
 
 
-output_dir = output_dir_628
-video_sample_config = config_aruco_628
+output_dir = output_dir_725
+video_sample_config = config_aruco_725

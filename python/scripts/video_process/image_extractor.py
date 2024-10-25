@@ -19,7 +19,7 @@ for cfg in video_sample_config:
         if len(clip) > 2:
             if clip[2] is not None:
                 print(f'Clip {clip_counter} has desc: {clip[2]}')
-                with open(f'{working_dir}/desc.txt', 'w') as f:
+                with open(f'{working_dir}/desc.txt', 'w+') as f:
                     f.write(clip[2])
         print(f'successfully processed clip {clip_counter} for video {vid_file_name} with {res}')
         clip_counter += 1
